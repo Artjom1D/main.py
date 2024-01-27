@@ -1,0 +1,82 @@
+import requests
+import random
+from random import choice
+import discord
+from discord.ext import commands
+intents = discord.Intents.default()
+intents.members = True
+intents.message_content = True
+bot = commands.Bot(command_prefix='/', intents=intents)
+client = discord.Client(intents=intents)
+
+
+papers = ["Существует разнообразие типов бумаги, предназначенных для различных целей. Например, ксероксная бумага, картон, газетная бумага, искусственные материалы для рисования и т.д."," Бумага также является популярным материалом в искусстве. Художники используют бумагу для рисования, коллажей, оригами и других творческих проектов.","Первый вариант бумаги появился в Европе в Испании в XI веке, а первая бумажная мельница была построена в Италии в 1276 году.","Каждый год в мире производят 350 млн тонн бумаги."]
+plastics = ["Основные исходные материалы для производства пластика - это нефть и природный газ.","Пластик обладает высокой прочностью при небольшом весе, что делает его привлекательным материалом для многих применений, таких как упаковка, автомобильная промышленность и медицинская техника.","Огромные количества пластика попадают в океаны, что создает проблему океанского загрязнения.","Пластик может распадаться на микроскопические частицы, называемые микропластиками, которые могут попадать в водные системы и даже в пищевые цепи через рыб и других морских организмов.","Научные исследования направлены на создание биоразлагаемых и экологически более безопасных альтернатив традиционным видам пластика."]
+glases = ["Изготовление стекла было известно с древних времен, но точное время и место его изобретения неизвестны.","Стекло часто используется в художественных работах и ремеслах, таких как стеклянные скульптуры, витражи и стеклянные украшения.","Стеклянная упаковка: Большая часть стеклянной упаковки является 100%"," Современные технологии приводят к созданию инновационных видов стекла, таких как смарт-стекло, которое может регулировать прозрачность под воздействием электричества, и термохромное стекло, меняющее цвет при изменении температуры."]
+organic_wastes = ["Органические отходы могут разлагаться естественным образом под воздействием микроорганизмов, таких как бактерии и грибы.","Органические отходы могут использоваться для производства биогаза в процессе анаэробного биоразложения.","Если органические отходы попадают на свалку и разлагаются без доступа воздуха, это может привести к выделению метана, который является сильным парниковым газом.","Использование органических отходов в сельском хозяйстве может способствовать повышению плодородия почвы, улучшению структуры почвы и сокращению необходимости использования химических удобрений."]
+electronices = ["Основные электронные компоненты включают в себя резисторы, конденсаторы, индуктивности, диоды, транзисторы и многочисленные другие элементы, которые используются в электронных схемах.","Компьютеры, ноутбуки, смартфоны и планшеты - все эти устройства основаны на принципах электроники","Электроника играет ключевую роль в сфере связи, включая телефоны, радиосвязь, сети передачи данных и интернет.","Утилизация электронных отходов (электронной мусорной) стала серьезной проблемой из-за быстрого обновления и замены электроники"]
+
+
+def get_paper_image_url():    
+    url = 'https://source.unsplash.com/featured/?paper'
+    res = requests.get(url)
+    return res.url
+
+
+@bot.command()
+async def paper(ctx):
+
+    await ctx.send(random.choice(papers))
+    image_url = get_paper_image_url()
+    await ctx.send(image_url)
+
+
+def get_plastic_image_url():    
+    url = 'https://source.unsplash.com/featured/?plastic'
+    res = requests.get(url)
+    return res.url
+
+@bot.command()
+async def plastic(ctx):
+    
+    await ctx.send(random.choice(plastics))
+    image_url = get_plastic_image_url()
+    await ctx.send(image_url)
+
+
+def get_glass_image_url():    
+    url = 'https://source.unsplash.com/featured/?glass'
+    res = requests.get(url)
+    return res.url
+
+@bot.command()
+async def glass(ctx):
+    
+    await ctx.send(random.choice(glases))
+    image_url = get_glass_image_url()
+    await ctx.send(image_url)
+
+def get_organic_waste_image_url():    
+    url = 'https://source.unsplash.com/featured/?organic-waste'
+    res = requests.get(url)
+    return res.url
+@bot.command()
+async def organic_waste(ctx):
+
+    await ctx.send(random.choice(organic_wastes))
+    image_url = get_organic_waste_image_url()
+    await ctx.send(image_url)
+
+
+def get_electronics_image_url():    
+    url = 'https://source.unsplash.com/featured/?electronics'
+    res = requests.get(url)
+    return res.url    
+@bot.command()
+async def electronics(ctx):
+    
+    await ctx.send(random.choice(electronices))
+    image_url = get_electronics_image_url()
+    await ctx.send(image_url)
+
+bot.run("TOKEN")
