@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать на мой сайт!</h1>
+        <h2>Я хочу расказать вам как бороться с зависимостью интернет-шопинга и онлайн-покупок</h2>
+        <img scr="https://pargo.co.za/wp-content/uploads/2018/03/online-shopping-ecommerce-ss-1920.png">
+    </header>
+    
+   
+    
+    
+    <main>
+        <iframe src="https://www.meteoblue.com/en/weather/widget/daily/ip_romania_675514?geoloc=fixed&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&precipunit=MILLIMETER&coloured=coloured&pictoicon=0&pictoicon=1&maxtemperature=0&maxtemperature=1&mintemperature=0&mintemperature=1&windspeed=0&windspeed=1&windgust=0&windgust=1&winddirection=0&winddirection=1&uv=0&humidity=0&precipitation=0&precipitation=1&precipitationprobability=0&precipitationprobability=1&spot=0&spot=1&pressure=0&layout=light"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 216px; height: 420px"></iframe><div><!-- DO NOT REMOVE THIS LINK --><a href="https://www.meteoblue.com/en/weather/week/ip_romania_675514?utm_source=weather_widget&utm_medium=linkus&utm_content=daily&utm_campaign=Weather%2BWidget" target="_blank" rel="noopener">meteoblue</a></div>
+        <h3>Пример зависимости интернет-шопинга и онлайн-покупок</h3>
+        <ul>
+            <li>Завышенные ожидания</li>
+            <li>Импульсивные покупки</li>
+            <li>Зависимость от скидок и акций</li>
+        </ul>
+
+            <h2>Как решить проблему</h2>
+            <p>Избавление от зависимости от интернет-шопинга и онлайн-покупок требует осознанности и принятия конкретных шагов. Вот несколько рекомендаций:</p>
+            <ol>
+                <li>Создайте бюджет и следите за ним</li>
+                <li>Составьте список покупок</li>
+                <li>Удаляйте лишние приложения</li>
+            </щl>
+        </section>
+    </main>
+    
+
+</body>
+</html>
